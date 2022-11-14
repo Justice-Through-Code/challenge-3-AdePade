@@ -1,10 +1,21 @@
 
+
+
 def stock_purchases():
-    amazon = 3000
-    apple = 100
-    fb = 250
-    google = 1400
-    msft = 200
+    # amazon = 3000
+    # apple = 100
+    # fb = 250
+    # google = 1400
+    # msft = 200
+
+    stocks= {
+        'Amazon' : 3000,
+        'Apple' : 100,
+        'Facebook' : 250,
+        'Google' : 1400,
+        'Microsoft' : 200,
+    }
+
 
     # Given the prices above and a client's investment budget, how much stock can they buy?
     # 1.1 TODO: Ask the client's name (use the string: "What is your name? ") and save it into a variable
@@ -28,16 +39,17 @@ def stock_purchases():
         #if input is amazon 
         #price = 3000
     #max stock you can buy is how_much / price
-    if stock_name == "Amazon":
-        price = amazon
-    elif stock_name == "Apple":
-        price = apple
-    elif stock_name == "Facebook":
-        price = fb
-    elif stock_name == "Google":
-        price = google
-    elif stock_name == "Microsoft":
-        price = msft
+    price = stocks[stock_name]
+    # if stock_name == "Amazon":
+    #     price = amazon
+    # elif stock_name == "Apple":
+    #     price = apple
+    # elif stock_name == "Facebook":
+    #     price = fb
+    # elif stock_name == "Google":
+    #     price = google
+    # elif stock_name == "Microsoft":
+    #     price = msft
     max_stock = int(how_much / price)
 
 
@@ -48,4 +60,4 @@ def stock_purchases():
     stock_purchase = f'{client} has ${how_much} to invest and can buy {max_stock} shares of {stock_name} at the current price of ${price}.'
     print(stock_purchase)
 
-# stock_purchases()
+stock_purchases()
